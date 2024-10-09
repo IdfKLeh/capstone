@@ -1,0 +1,9 @@
+핵심으로 끌고갈 다른점 예시:
+
+신화를 활용한 특색있는 설정
+마우스로만으로도 플레이 할 수 있어 어려운 컨트롤에 자신이 없는 사람도 할 수 있는 게임
+
+
+소프트웨어공학 넣기 test driven development이 제일 만만 
+requirement specification도 좋음
+software process
