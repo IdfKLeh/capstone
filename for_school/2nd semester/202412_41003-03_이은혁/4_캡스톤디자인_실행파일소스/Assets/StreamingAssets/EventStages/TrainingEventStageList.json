@@ -1,0 +1,541 @@
+{
+    "events": [
+        {
+            "eventID": "Begger",
+            "conditions": "None",
+            "eventType": "Neutral",
+            "eventKarma": "Good",
+            "basicOptionNumber":2,
+            "dialogues": [
+                {
+                    "restriction":[{}],
+                    "text": "A smelly old man approaches, asking you for a hug. Will you give him a hug?"
+                },
+                {
+                    "restriction":[{
+                        "stats":"intStat",
+                        "amount":300
+                    }],
+                    "text":"His toes actually look clean."
+                },
+                {
+                    "restriction":[{
+                        "stats":"phyStat",
+                        "amount":400
+                    }],
+                    "text": "Despite his large figure, he seems to be bearly standing."
+                }
+            ],
+            "allOptions": [
+                {
+                    "restriction":[{}],
+                    "text": "Sure, Hug him!",
+                    "action": [{
+                        "type": "itemGet",
+                        "item": "golden coin"
+                    }],
+                    "afterText": [{
+                        "restriction":[{}],
+                        "text": "He was satisfied, gave you a golden coin!"
+                    }],
+                    "afterOptionText": "Yay!"
+                },
+                {
+                    "restriction":[{}],
+                    "text": "Fuck no.",
+                    "action": [{
+                    }],
+                    "afterText": [{
+                        "restriction":[{}],
+                        "text": "He looked hurt, maybe you should have hugged him after all.."
+                    }],
+                    "afterOptionText": "Who do you think you are?"
+                },
+                {
+                    "restriction": [{
+                        "stats": "phyStat",
+                        "amount": 800
+                    }],
+                    "text": "Rob him!",
+                    "action": [{
+                        "type": "statChange",
+                        "stats": "phyStat",
+                        "amount": 20
+                    },
+                    {
+                        "type": "statChange",
+                        "stats": "intStat",
+                        "amount":-80 
+                    }],
+                    "afterText": [{
+                        "restriction":[{}],
+                        "text": "During a short fistfight, the old man lost balance and fell head first on the floor, dying instantly."
+                    }],
+                    "afterOptionText": "You got stronger, but dumber."
+                }
+            ]
+        },
+        {
+            "eventID": "MeetingWithTheBear",
+            "conditions": "None",
+            "eventType": "Neutral",
+            "eventKarma": "Normal",
+            "basicOptionNumber":2,
+            "dialogues": [
+                {
+                    "restriction":[{}],
+                    "text": "You are trying to get through a mountain. As the sun goes down, you hurry your footsteps to not get caught by the darkness of the forest, when suddenly, you find yourself caught in the middle of a tense standoff between a boy and a huge bear."
+                },
+                {
+                    "restriction":[{
+                        "stats":"intStat",
+                        "amount":400
+                    }],
+                    "text":"The boy seems terrified, trying to stay completely still, not to provoke the bear, while the bear on the other hand seems willing to pounce at the boy at any time, only stopped by the throwing spear loaded at the boys hand."
+                }
+            ],
+            "allOptions": [
+                {
+                    "restriction": [
+                        {}
+                    ],
+                    "text": "Defeat the bear with the boy!",
+                    "action": [
+                        {
+                            "type": "statChange",
+                            "stats": "phyStat",
+                            "amount": 20
+                        }
+                    ],
+                    "afterText": [
+                        {
+                            "restriction": [
+                                {}
+                            ],
+                            "text": "You decided to help the boy defeat the bear. The bear was no match for the two of you, and you managed to defeat it. The boy thanked you deeply. You feel much stronger after the fight."
+                        }
+                    ],
+                    "afterOptionText": "Yay!"
+                },
+                {
+                    "restriction":[{}],
+                    "text": "Help the boy run away.",
+                    "action": [{
+                        "type":"moneyGet",
+                        "amount": 100
+                    },
+                    {
+                        "type": "statChange",
+                        "stats": "medStat",
+                        "amount": 5
+                    }],
+                    "afterText": [{
+                        "restriction":[{}],
+                        "text": "You exchanged a look with the boy, and a second later yelled in a booming voice, scaring and also turning the bear’s attention to yourself. “Run!” you exclaimed, as you started to run in the opposite direction of the boy. The last thing you saw was the boy sprinting off downwards the mountain, and although you didn’t stop for a quite a long time, the bear did not seem to chase either of you at all. After you were certain that it was perfectly safe, you headed down the mountain and to the nearest village, where you found the boy searching everywhere at the entrance eager to meet his saver, and receive a few coins as a sign of gratitude."
+                    },
+                    {
+                        "restriction":[{
+                            "stats":"intStat",
+                            "amount":300
+                        }],
+                        "text": "Wonder why the bear didn't follow any of us?"
+                    }],
+                    "afterOptionText": "Yay!"
+                },
+                {
+                    "restriction": [{
+                        "stats": "speStat",
+                        "amount": 600
+                    }],
+                    "text": "Pray to the great father Zeus.",
+                    "action": [{
+                        "type": "moneyGet",
+                        "amount": 200
+                    },
+                    {
+                        "type": "pointChange",
+                        "stats": "heraPoint",
+                        "amount": -5
+
+                    },
+                    {
+                        "type": "eventStart",
+                        "stats": "zeusGift" 
+                    }],
+                    "afterText": [{
+                        "restriction":[{}],
+                        "text": "You get down on your knees and start to pray. The boy and the bear looks baffled at this sudden gesture, as well as yourself, to be honest. It just seemed like the right thing to do! Anyhow, it must’ve been correct, because Zeus himself answered almost immediately, mediating the near-happen of battle with a powerful swift of wind, knocking both the bear and the boy of the ground, and into the high skies. Zeus then presented your mind with the entire knowledge of the situation, as well as a good amount of gold and a gift of your choice."
+                    }], 
+                    "afterOptionText": "Yay!"
+                },
+                {
+                    "restriction": [{
+                        "stats": "phyStat",
+                        "amount": 700
+                    }],
+                    "text": "Spear the bear!",
+                    "action": [{
+                        "type": "moneyGet",
+                        "amount": 200
+                    },
+                    {
+                        "type": "pointChange",
+                        "stats": "zeusPoint",
+                        "amount": -20
+                    },
+                    {
+                        "type": "healthChange",
+                        "amount": 10
+                    }],
+                    "afterText": [{
+                        "restriction":[{}],
+                        "text": "With a powerful, yet swift movement, you take the spear from the boys arm and impale the bear in the exact point where its heart must lie. The bear lets out a enormous, yet somehow heartbreaking cry, before pummeling head first to the soft ground. The boy thanks you, and helps you skin the bear for its spoils, and leads you to his home serving a great dish of bear soup. Although for some reason, he did not eat a bite and decided to go straight to bed, telling you that you can rest however you want. You take a good nights sleep and head out first in the morning, not able to thank the boy as he did not leave his room, doors tightly closed."
+                    }], 
+                    "afterOptionText": "Whew."
+                }
+            ]
+        },
+        {
+            "eventID": "AHugeRain",
+            "conditions": "None",
+            "eventType": "Neutral",
+            "eventKarma": "Bad",
+            "basicOptionNumber":1,
+            "dialogues": [
+                {
+                    "restriction":[{}],
+                    "text": "You’re walking on a cornfield. Completely happy by the warm sun glaze covering up the whole ground, you have a good feeling about the trip set in front of you. Suddenly, the sky gets covered with dark rain clouds, making the sunny weather few minutes ago feel like a huge lie. A cold drizzle starts, leading to a freezing downpour, accompanied with powerful gusts wind." },
+                {
+                    "restriction":[{
+                        "stats":"medStat",
+                        "amount":300
+                    }],
+                    "text":"The sudden change of the weather seems so odd, as if the sky were mad."
+                }
+            ],
+            "allOptions": [
+                {
+                    "restriction":[{}],
+                    "text": "Power through",
+                    "action": [{
+                        "type": "moneyGet",
+                        "item": "-25"
+                    },
+                    {
+                        "type": "healthChange",
+                        "amount": -2
+                    }],
+                    "afterText": [{
+                        "restriction":[{}],
+                        "text": "You decided to march through the horrible weather. But it turned out that the coldness was too much for any man, and you got a terrible frostbite on your feet, costing you some gold and health to heal."
+                    }],
+                    "afterOptionText": "Damn."
+                },
+                {
+                    "restriction":[{
+                        "stats":"intStat",
+                        "amount": 250
+                    }],
+                    "text": "Stay at a nearby house.",
+                    "action": [{
+                        "type": "moneyGet",
+                        "amount": -20
+                    }],
+                    "afterText": [{
+                        "restriction":[{}],
+                        "text": "You decided to seek help at a nearby house. Fortunately, there was a tavern close enough to reach before too late. You had a good nights sleep there had headed down the road next day."
+                    }],
+                    "afterOptionText": "Could be worse."
+                },
+                {
+                    "restriction": [{
+                        "stats": "speStat",
+                        "amount": 300
+                    }],
+                    "text": "Try answering the wind god.",
+                    "action": [{}],
+                    "afterText": [{
+                        "restriction":[{}],
+                        "text": "You got on your knees, and shouted in a booming voice, in hopes that the wind god Notus will notice. Fortunately the shout reached the ears of the god of southern wind, and he turned back to greet you. You humbly asked him to stop the cold weather, which he kindly accepted."
+                    }],
+                    "afterOptionText": "Could be worse."
+                }
+            ]
+        },
+        {
+            "eventID": "Begger",
+            "conditions": "None",
+            "eventType": "Neutral",
+            "eventKarma": "Bad",
+            "basicOptionNumber":2,
+            "dialogues": [
+                {
+                    "restriction":[{}],
+                    "text": "A smelly old man approaches, asking you for a hug. Will you give him a hug?"
+                },
+                {
+                    "restriction":[{
+                        "stats":"intStat",
+                        "amount":300
+                    }],
+                    "text":"His toes actually look clean."
+                },
+                {
+                    "restriction":[{
+                        "stats":"phyStat",
+                        "amount":400
+                    }],
+                    "text": "Despite his large figure, he seems to be bearly standing."
+                }
+            ],
+            "allOptions": [
+                {
+                    "restriction":[{}],
+                    "text": "Sure, Hug him!",
+                    "action": [{
+                        "type": "itemGet",
+                        "item": "golden coin"
+                    }],
+                    "afterText": [{
+                        "restriction":[{}],
+                        "text": "He was satisfied, gave you a golden coin!"
+                    }],
+                    "afterOptionText": "Yay!"
+                },
+                {
+                    "restriction":[{}],
+                    "text": "Fuck no.",
+                    "action": [{
+                    }],
+                    "afterText": [{
+                        "restriction":[{}],
+                        "text": "He looked hurt, maybe you should have hugged him after all.."
+                    }],
+                    "afterOptionText": "Who do you think you are?"
+                },
+                {
+                    "restriction": [{
+                        "stats": "phyStat",
+                        "amount": 800
+                    }],
+                    "text": "Rob him!",
+                    "action": [{
+                        "type": "statChange",
+                        "stats": "phyStat",
+                        "amount": 20
+                    },
+                    {
+                        "type": "statChange",
+                        "stats": "intStat",
+                        "amount":-80 
+                    }],
+                    "afterText": [{
+                        "restriction":[{}],
+                        "text": "During a short fistfight, the old man lost balance and fell head first on the floor, dying instantly."
+                    }], 
+                    "afterOptionText": "You got stronger, but dumber."
+                },
+                {
+                    "restriction": [{
+                        "stats": "staStat",
+                        "amount": 800
+                    }],
+                    "text": "Defend yourself",
+                    "action": [{
+                    }],
+                    "afterText": [{
+                        "restriction":[{}],
+                        "text": "You blocked the shot, barely getting any damage from it."
+                    }], 
+                    "afterOptionText": "Whew."
+                }
+            ]
+        },
+        {
+            "eventID": "meetingWithTheBear",
+            "conditions": "None",
+            "eventType": "Neutral",
+            "eventKarma": "Good",
+            "basicOptionNumber":2,
+            "dialogues": [
+                {
+                    "restriction":[{}],
+                    "text": "You are trying to get through a mountain. As the sun goes down, you hurry your footsteps to not get caught by the darkness of the forest, when suddenly, you find yourself caught in the middle of a tense standoff between a boy and a huge bear."
+                },
+                {
+                    "restriction":[{
+                        "stats":"intStat",
+                        "amount":400
+                    }],
+                    "text":"The boy seems terrified, trying to stay completely still, not to provoke the bear, while the bear on the other hand seems willing to pounce at the boy at any time, only stopped by the throwing spear loaded at the boys hand."
+                }
+            ],
+            "allOptions": [
+                {
+                    "restriction":[{}],
+                    "text": "Defeat the bear with the boy!",
+                    "action": [{
+                        "type": "statChange",
+                        "stats": "phyStat",
+                        "amount": 20
+                    }],
+                    "afterText":[{
+                        "restriction":[{}],
+                        "text": "You decided to help the boy defeat the bear. The bear was no match for the two of you, and you managed to defeat it. The boy thanked you deeply. You feel much stronger after the fight."
+                    }],
+                    "afterOptionText": "Yay!"
+                },
+                {
+                    "restriction":[{}],
+                    "text": "Help the boy run away.",
+                    "action": [{
+                        "type":"moneyGet",
+                        "amount": 100
+                    },
+                    {
+                        "type": "statChange",
+                        "stats": "medStat",
+                        "amount": 5
+                    }],
+                    "afterText": [{
+                        "restriction":[{}],
+                        "text": "You exchanged a look with the boy, and a second later yelled in a booming voice, scaring and also turning the bear’s attention to yourself. “Run!” you exclaimed, as you started to run in the opposite direction of the boy. The last thing you saw was the boy sprinting off downwards the mountain, and although you didn’t stop for a quite a long time, the bear did not seem to chase either of you at all. After you were certain that it was perfectly safe, you headed down the mountain and to the nearest village, where you found the boy searching everywhere at the entrance eager to meet his saver, and receive a few coins as a sign of gratitude."
+                    },
+                    {
+                        "restriction":[{
+                            "stats":"intStat",
+                            "amount":300
+                        }],
+                        "text": "Wonder why the bear didn't follow any of us?"
+                    }],
+                    "afterOptionText": "Yay!"
+                },
+                {
+                    "restriction": [{
+                        "stats": "speStat",
+                        "amount": 600
+                    }],
+                    "text": "Pray to the great father Zeus.",
+                    "action": [{
+                        "type": "moneyGet",
+                        "amount": 200
+                    },
+                    {
+                        "type": "pointChange",
+                        "stats": "heraPoint",
+                        "amount": -5
+
+                    },
+                    {
+                        "type": "eventStart",
+                        "stats": "zeusGift" 
+                    }],
+                    "afterText": [{
+                        "restriction":[{}],
+                        "text": "You get down on your knees and start to pray. The boy and the bear looks baffled at this sudden gesture, as well as yourself, to be honest. It just seemed like the right thing to do! Anyhow, it must’ve been correct, because Zeus himself answered almost immediately, mediating the near-happen of battle with a powerful swift of wind, knocking both the bear and the boy of the ground, and into the high skies. Zeus then presented your mind with the entire knowledge of the situation, as well as a good amount of gold and a gift of your choice."
+                    }], 
+                    "afterOptionText": "Yay!"
+                },
+                {
+                    "restriction": [{
+                        "stats": "phyStat",
+                        "amount": 700
+                    }],
+                    "text": "Spear the bear!",
+                    "action": [{
+                        "type": "moneyGet",
+                        "amount": 200
+                    },
+                    {
+                        "type": "pointChange",
+                        "stats": "zeusPoint",
+                        "amount": -20
+                    },
+                    {
+                        "type": "healthChange",
+                        "amount": 10
+                    }],
+                    "afterText": [{
+                        "restriction":[{}],
+                        "text": "With a powerful, yet swift movement, you take the spear from the boys arm and impale the bear in the exact point where its heart must lie. The bear lets out a enormous, yet somehow heartbreaking cry, before pummeling head first to the soft ground. The boy thanks you, and helps you skin the bear for its spoils, and leads you to his home serving a great dish of bear soup. Although for some reason, he did not eat a bite and decided to go straight to bed, telling you that you can rest however you want. You take a good nights sleep and head out first in the morning, not able to thank the boy as he did not leave his room, doors tightly closed."
+                    }], 
+                    "afterOptionText": "Whew."
+                }
+            ]
+        },
+        {
+            "eventID": "AGirlRunningFromLove",
+            "conditions": "None",
+            "eventType": "Neutral",
+            "eventKarma": "Normal",
+            "basicOptionNumber": 2,
+            "dialogues": [
+                {
+                    "restriction": [
+                        {}
+                    ],
+                    "text": "You’re walking through a long, golden wheat field. You notice a maiden running away in the distance from a flying god. Although the god, Apollo, does not seem aggressive or angered at all, in fact, looking quite happy and desperate, the girl seems to be running for her life"
+                }
+            ],
+            "allOptions": [
+                {
+                    "restriction": [
+                        {}
+                    ],
+                    "text": "Help the girl",
+                    "action": [
+                        {
+                            "type": "healthChange",
+                            "amount": -10
+                        },
+                        {
+                            "type": "statChange",
+                            "stats": "medStat",
+                            "amount": 20
+                        }
+                    ],
+                    "afterText": [
+                        {
+                            "restriction": [
+                                {}
+                            ],
+                            "text": "You decide to help the girl. As she runs towards you, you tackle her down when the sun god lost sight of her. Then when he questioned where she had gone, you play dumb and tell him that you did not see anyone. This angered him and you got to walk away with a fire burn on your bottom. "
+                        }
+                    ],
+                    "afterOptionText": "Damn."
+                },
+                {
+                    "restriction": [
+                        {}
+                    ],
+                    "text": "Help the god",
+                    "action": [
+                        {
+                            "type":"healthChange",
+                            "amount": -5
+                        },
+                        {
+                            "type": "statChange",
+                            "stats": "medStat",
+                            "amount": -10
+                        },
+                        {
+                            "type": "moneyGet",
+                            "amount": 50
+                        }
+                    ],
+                    "afterText": [
+                        {
+                            "restriction": [
+                                {}
+                            ],
+                            "text": "You decide to help the god. As she runs towards you, you grab her, making her not able to escape. Just as the sun god found this satisfying and were about to touch her face for the first time, the girl turned into a dry, large tree. Since you were holding her hard, her branches and bark made a scratch in your arms. The sun god, while struck with grief, still thought high of you and gave you some gold for your favor."
+                        }
+                    ],
+                    "afterOptionText": "Yay!"
+                }
+            ]
+        }
+
+    ]
+}

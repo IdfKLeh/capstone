@@ -1,0 +1,54 @@
+{
+    "weapon":[
+        {
+            "weaponID": "rustyBroadSword",
+            "weaponType": "broadSword",
+            "weaponName": "Rusty Broad Sword",
+            "hitCount": 1,
+            "phyStatRate": 0.05,
+            "weaStatRate": [{
+                "calc": "Hit Rate",
+                "rate": 0.002
+            }],
+            "weaponAction":[{
+            }],
+            "weaponDescription":[{
+                
+            }]
+        },
+        {
+            "weaponId": "rustyDagger",
+            "weaponType": "dagger",  
+            "weaponName": "Rusty Dagger",
+            "hitCount": 1,
+            "phyStatRate": 0.02,
+            "weaStatRate": [{
+                "calc": "Hit Rate",
+                "rate": 0.01
+            }],
+            "weaponAction":[{
+            }],
+            "weaponDescription":[{
+                
+            }]     
+        },
+        {
+            "weaponId": "bareFist",
+            "weaponType": "fist",  
+            "weaponName": "Bare Fist",
+            "hitCount": 2,
+            "phyStatRate": 0.01,
+            "weaStatRate": [{
+                "calc": "Hit Rate",
+                "rate": 0.03
+            }],
+            "weaponAction":[{
+            }],
+            "weaponDescription":[{
+                
+            }]
+        }
+    ]
+
+
+}

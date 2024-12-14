@@ -1,0 +1,212 @@
+{
+    "enemy":[
+        {
+            "enemyID":"basicSwordMan",
+            "enemyName":"Sword Man",
+            "homeLevel":1,
+            "visibleLevel":[1,2,3],
+            "stat":{
+                "phyStat":300,
+                "intStat":300,
+                "staStat":300,
+                "medStat":300,
+                "speStat":300,
+                "weaStat":300
+            },
+            "weaponType":"broadSword",
+            "weaponID":"rustyBroadSword",
+            "enemySkill":[],
+            "enemyTrait":[],
+            "enemyDescription":[{
+                "text":"A normal looking swordman."
+            },
+            {
+                "restriction":[{
+                    "type": "basicIntRes"
+                }],
+                "text":"Looks slow."
+            }],
+            "winAction":[{
+                "type":"moneyGet",
+                "amount":100
+            },
+            {
+                "type":"statChange",
+                "stats":"phyStat",
+                "amount":5
+            }],
+            "loseAction":[{
+                "type":"statChange",
+                "stats":"phyStat",
+                "amount":-5
+            }]
+
+        },
+        {
+            "enemyID":"lycaon",
+            "enemyName":"Wild Wolf",
+            "homeLevel":1,
+            "visibleLevel":[1,2,3],
+            "stat":{
+                "phyStat":300,
+                "intStat":300,
+                "staStat":300,
+                "medStat":100,
+                "speStat":300,
+                "weaStat":200
+            },
+            "weaponType":"broadSword",
+            "weaponID":"rustyBroadSword",
+            "enemySkill":[{
+                "skillName":"Bite",
+                "skillDamage": 5,
+                "skillRate": 0.1 
+            },
+            {
+                "skillName":"Scratch",
+                "skillDamage": 3,
+                "skillRate": 0.2 
+            }],
+            "enemyTrait":[],
+            "enemyDescription":[{
+                "text":"A feral looking wolf."
+            },
+            {
+                "restriction":[{
+                    "stats": "intStat",
+                    "amount": 300
+                }],
+                "text":"Its eyes seems like it carries a spot of dreadful grief within the madness in it."
+            },
+            {
+                "restriction":[{
+                    "stats": "intStat",
+                    "amount": 300
+                }],
+                "text":"Its almost like looking inside a human's pupil."
+            }
+            ],
+            "winAction":[{
+                "type":"moneyGet",
+                "amount":50
+            },
+            {
+                "type":"statChange",
+                "stats":"phyStat",
+                "amount":10
+            }],
+            "loseAction":[
+                {
+                    "type":"moneyGet",
+                    "amount":-50
+                },
+                {
+                "type":"statChange",
+                "stats":"phyStat",
+                "amount":-5
+            }]
+
+        },
+        {
+            "enemyID": "harpy",
+            "enemyName": "Harpy",
+            "homeLevel": 1,
+            "visibleLevel": [
+                1,
+                2,
+                3
+            ],
+            "stat": {
+                "phyStat": 100,
+                "intStat": 300,
+                "staStat": 300,
+                "medStat": 100,
+                "speStat": 300,
+                "weaStat": 800
+            },
+            "weaponType": "fist",
+            "weaponID": "bareFist",
+            "enemySkill": [
+                {
+                    "skillName": "Wing Slap",
+                    "skillDamage": 3,
+                    "skillRate": 0.2
+                },
+                {
+                    "skillName": "Scratch",
+                    "skillDamage": 3,
+                    "skillRate": 0.2
+                }
+            ],
+            "enemyTrait": [],
+            "enemyDescription": [
+                {
+                    "text": "A large bird in a women's body."
+                } 
+            ],
+            "winAction": [
+                {
+                    "type": "moneyGet",
+                    "amount": 100
+                },
+                {
+                    "type": "statChange",
+                    "stats": "weaStat",
+                    "amount": 10
+                }
+            ],
+            "loseAction": [
+                {
+                    "type": "statChange",
+                    "stats": "weaStat",
+                    "amount": -5
+                }
+            ]
+        },
+        {
+            "enemyID": "bandit",
+            "enemyName": "Bandit",
+            "homeLevel": 1,
+            "visibleLevel": [
+                1,
+                2,
+                3
+            ],
+            "stat": {
+                "phyStat": 100,
+                "intStat": 300,
+                "staStat": 300,
+                "medStat": 100,
+                "speStat": 300,
+                "weaStat": 500
+            },
+            "weaponType": "dagger",
+            "weaponID": "rustyDagger",
+            "enemySkill": [
+                {
+                    "skillName": "Deep cut",
+                    "skillDamage": 5,
+                    "skillRate": 0.5
+                }
+            ],
+            "enemyTrait": [],
+            "enemyDescription": [
+                {
+                    "text": "Regular old bandit. Hopes to steal your money."
+                }
+            ],
+            "winAction": [
+                {
+                    "type": "moneyGet",
+                    "amount": 300
+                }
+            ],
+            "loseAction": [
+                {
+                    "type": "moneyGet",
+                    "amount": -300
+                }
+            ]
+        }
+    ]
+}

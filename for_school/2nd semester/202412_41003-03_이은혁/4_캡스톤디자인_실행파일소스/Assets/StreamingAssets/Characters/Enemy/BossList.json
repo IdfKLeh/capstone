@@ -1,0 +1,82 @@
+{
+    "enemy": [
+        {
+            "enemyID": "python",
+            "enemyName": "Python",
+            "homeLevel": 1,
+            "visibleLevel": [
+                1,
+                2,
+                3
+            ],
+            "stat": {
+                "phyStat": 500,
+                "intStat": 500,
+                "staStat": 500,
+                "medStat": 100,
+                "speStat": 500,
+                "weaStat": 500
+            },
+            "weaponType": "fist",
+            "weaponID": "bareFist",
+            "enemySkill": [
+                {
+                    "skillName": "Bite",
+                    "skillDamage": 10,
+                    "skillRate": 0.5
+                },
+                {
+                    "skillName": "Tail Whip",
+                    "skillDamage": 15,
+                    "skillRate": 0.5
+                },
+                {
+                    "skillName": "Toxic Venom",
+                    "skillDamage": 20,
+                    "skillRate": 0.2
+                }
+
+            ],
+            "enemyTrait": [],
+            "enemyDescription": [
+                {
+                    "text": "A gigantic snake."
+                },
+                {
+                    "restriction": [
+                        {
+                            "stats": "intStat",
+                            "amount": 300
+                        }
+                    ],
+                    "text": "It seems as ancient as the time itself."
+                }
+            ],
+            "winAction": [
+                {
+                    "type": "moneyGet",
+                    "amount": 1000
+                },
+                {
+                    "type": "statChange",
+                    "stats": "phyStat",
+                    "amount": 50
+                }
+            ],
+            "loseAction": [
+                {
+                    "type": "moneyGet",
+                    "amount": -50
+                },
+                {
+                    "type": "statChange",
+                    "stats": "phyStat",
+                    "amount": -5
+                },
+                {
+                    "type": "gameOver"
+                }
+            ]
+        }
+    ]
+}

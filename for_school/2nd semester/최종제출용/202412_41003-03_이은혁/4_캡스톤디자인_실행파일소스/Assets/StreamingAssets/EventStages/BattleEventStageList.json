@@ -1,0 +1,647 @@
+{
+    "events": [
+        {
+            "eventID": "Begger",
+            "conditions": "None",
+            "eventType": "Positive",
+            "eventKarma": "Normal",
+            "basicOptionNumber":2,
+            "dialogues": [
+                {
+                    "restriction":[{}],
+                    "text": "This is a BattleEventStage. A smelly old man approaches, asking you for a hug. Will you give him a hug?"
+                },
+                {
+                    "restriction":[{
+                        "stats":"intStat",
+                        "amount":300
+                    }],
+                    "text":"His toes actually look clean."
+                },
+                {
+                    "restriction":[{
+                        "stats":"phyStat",
+                        "amount":400
+                    }],
+                    "text": "Despite his large figure, he seems to be bearly standing."
+                }
+            ],
+            "allOptions": [
+                {
+                    "restriction":[{}],
+                    "text": "Sure, Hug him!",
+                    "action": [{
+                        "type": "itemGet",
+                        "item": "golden coin"
+                    }],
+                    "afterText": [{
+                        "restriction":[{}],
+                        "text": "He was satisfied, gave you a golden coin!"
+                    }],
+                    "afterOptionText": "Yay!"
+                },
+                {
+                    "restriction":[{}],
+                    "text": "Fuck no.",
+                    "action": [{
+                    }],
+                    "afterText": [{
+                        "restriction":[{}],
+                        "text": "He looked hurt, maybe you should have hugged him after all.."
+                    }],
+                    "afterOptionText": "Who do you think you are?"
+                },
+                {
+                    "restriction": [{
+                        "stats": "phyStat",
+                        "amount": 800
+                    }],
+                    "text": "Rob him!",
+                    "action": [{
+                        "type": "statChange",
+                        "stats": "phyStat",
+                        "amount": 20
+                    },
+                    {
+                        "type": "statChange",
+                        "stats": "intStat",
+                        "amount":-80 
+                    }],
+                    "afterText": [{
+                        "restriction":[{}],
+                        "text": "During a short fistfight, the old man lost balance and fell head first on the floor, dying instantly."
+                    }],
+                    "afterOptionText": "You got stronger, but dumber."
+                }
+            ]
+        },
+        {
+            "eventID": "Begger",
+            "conditions": "None",
+            "eventType": "Positive",
+            "eventKarma": "Bad",
+            "basicOptionNumber":2,
+            "dialogues": [
+                {
+                    "restriction":[{}],
+                    "text": "This is a BattleEventStage. A smelly old man approaches, asking you for a hug. Will you give him a hug?"
+                },
+                {
+                    "restriction":[{
+                        "stats":"intStat",
+                        "amount":300
+                    }],
+                    "text":"His toes actually look clean."
+                },
+                {
+                    "restriction":[{
+                        "stats":"phyStat",
+                        "amount":400
+                    }],
+                    "text": "Despite his large figure, he seems to be bearly standing."
+                }
+            ],
+            "allOptions": [
+                {
+                    "restriction":[{}],
+                    "text": "Sure, Hug him!",
+                    "action": [{
+                        "type": "itemGet",
+                        "item": "golden coin"
+                    }],
+                    "afterText": [{
+                        "restriction":[{}],
+                        "text": "He was satisfied, gave you a golden coin!"
+                    }],
+                    "afterOptionText": "Yay!"
+                },
+                {
+                    "restriction":[{}],
+                    "text": "Fuck no.",
+                    "action": [{
+                    }],
+                    "afterText": [{
+                        "restriction":[{}],
+                        "text": "He looked hurt, maybe you should have hugged him after all.."
+                    }],
+                    "afterOptionText": "Who do you think you are?"
+                },
+                {
+                    "restriction": [{
+                        "stats": "phyStat",
+                        "amount": 800
+                    }],
+                    "text": "Rob him!",
+                    "action": [{
+                        "type": "statChange",
+                        "stats": "phyStat",
+                        "amount": 20
+                    },
+                    {
+                        "type": "statChange",
+                        "stats": "intStat",
+                        "amount":-80 
+                    }],
+                    "afterText": [{
+                        "restriction":[{}],
+                        "text": "During a short fistfight, the old man lost balance and fell head first on the floor, dying instantly."
+                    }], 
+                    "afterOptionText": "You got stronger, but dumber."
+                },
+                {
+                    "restriction": [{
+                        "stats": "staStat",
+                        "amount": 800
+                    }],
+                    "text": "Defend yourself",
+                    "action": [{
+                    }],
+                    "afterText": [{
+                        "restriction":[{}],
+                        "text": "You blocked the shot, barely getting any damage from it."
+                    }], 
+                    "afterOptionText": "Whew."
+                }
+            ]
+        },
+        {
+            "eventID": "Bounty",
+            "conditions": "None",
+            "eventType": "Positive",
+            "eventKarma":"Good",
+            "basicOptionNumber": 2,
+            "dialogues":[
+                {
+                    "restriction":[{}],
+                    "text": "This is a BattleEventStage. Your opponent was actually a criminal with a bounty on his head."
+                }
+            ],
+            "allOptions": [
+                {
+                    "restriction": [{}],
+                    "text": "Collect Bounty",
+                    "action": [{
+                        "type": "moneyGet",
+                        "amount": 100
+                    }],
+                    "afterText": [{
+                        "restriction":[{}],
+                        "text": "You got 100g, which will be used finely."
+                    }], 
+                    "afterOptionText": "Yay!"
+                },
+                {
+                    "restriction":[{
+                        "stats":"medStat",
+                        "amount": 400
+                    }],
+                    "text": "Respectfully refuse",
+                    "action":[{
+                        "type": "statChange",
+                        "stats": "medStat",
+                        "amount": 10
+                    }],
+                    "afterText": [{
+                        "restriction":[{}],
+                        "text": "You feel like a better person."
+                    }], 
+                    "afterOptionText": "Yay!"
+                }
+            ]
+        },
+        {
+            "eventID": "Bounty",
+            "conditions": "None",
+            "eventType": "Positive",
+            "eventKarma":"Normal",
+            "basicOptionNumber": 2,
+            "dialogues":[
+                {
+                    "restriction":[{}],
+                    "text": "This is a BattleEventStage. Your opponent was actually a criminal with a bounty on his head."
+                }
+            ],
+            "allOptions": [
+                {
+                    "restriction": [{}],
+                    "text": "Collect Bounty",
+                    "action": [{
+                        "type": "moneyGet",
+                        "amount": 100
+                    }],
+                    "afterText": [{
+                        "restriction":[{}],
+                        "text": "You got 100g, which will be used finely."
+                    }], 
+                    "afterOptionText": "Yay!"
+                },
+                {
+                    "restriction":[{
+                        "stats":"medStat",
+                        "amount": 400
+                    }],
+                    "text": "Respectfully refuse",
+                    "action":[{
+                        "type": "statChange",
+                        "stats": "medStat",
+                        "amount": 10
+                    }],
+                    "afterText": [{
+                        "restriction":[{}],
+                        "text": "You feel like a better person."
+                    }], 
+                    "afterOptionText": "Yay!"
+                }
+            ]
+        },
+        {
+            "eventID": "GetPunched",
+            "conditions": "None",
+            "eventType": "Negative",
+            "eventKarma": "Normal",
+            "basicOptionNumber": 2,
+            "dialogues": [
+                {
+                    "restriction":[{}],
+                    "text": "This is a BattleEventStage. Your opponent hit you in the face while you were down."
+                }
+            ],
+            "allOptions": [
+                {
+                    "restriction": [{}],
+                    "text": "Get hit",
+                    "action": [{
+                        "type": "healthChange",
+                        "amount": -5
+                    }],
+                    "afterText": [{
+                        "restriction":[{}],
+                        "text": "Ouch."
+                    }], 
+                    "afterOptionText": "Damn."
+                },
+                {
+                    "restriction": [{
+                        "stats": "staStat",
+                        "amount": 800
+                    }],
+                    "text": "Defend yourself",
+                    "action": [{}],
+                    "afterText": [{
+                        "restriction":[{}],
+                        "text":  "You blocked the shot, barely getting any damage from it."
+                    }], 
+                    "afterOptionText": "Whew."
+                }
+            ]
+        },
+        {
+            "eventID": "AHugeRain",
+            "conditions": "None",
+            "eventType": "Negative",
+            "eventKarma": "Normal",
+            "basicOptionNumber":1,
+            "dialogues": [
+                {
+                    "restriction":[{}],
+                    "text": "You’re walking on a cornfield. Completely happy by the warm sun glaze covering up the whole ground, you have a good feeling about the trip set in front of you. Suddenly, the sky gets covered with dark rain clouds, making the sunny weather few minutes ago feel like a huge lie. A cold drizzle starts, leading to a freezing downpour, accompanied with powerful gusts wind." },
+                {
+                    "restriction":[{
+                        "stats":"medStat",
+                        "amount":300
+                    }],
+                    "text":"The sudden change of the weather seems so odd, as if the sky were mad."
+                }
+            ],
+            "allOptions": [
+                {
+                    "restriction":[{}],
+                    "text": "Power through",
+                    "action": [{
+                        "type": "moneyGet",
+                        "item": "-25"
+                    },
+                    {
+                        "type": "healthChange",
+                        "amount": -2
+                    }],
+                    "afterText": [{
+                        "restriction":[{}],
+                        "text": "You decided to march through the horrible weather. But it turned out that the coldness was too much for any man, and you got a terrible frostbite on your feet, costing you some gold and health to heal."
+                    }],
+                    "afterOptionText": "Damn."
+                },
+                {
+                    "restriction":[{
+                        "stats":"intStat",
+                        "amount": 250
+                    }],
+                    "text": "Stay at a nearby house.",
+                    "action": [{
+                        "type": "moneyGet",
+                        "amount": -20
+                    }],
+                    "afterText": [{
+                        "restriction":[{}],
+                        "text": "You decided to seek help at a nearby house. Fortunately, there was a tavern close enough to reach before too late. You had a good nights sleep there had headed down the road next day."
+                    }],
+                    "afterOptionText": "Could be worse."
+                },
+                {
+                    "restriction": [{
+                        "stats": "speStat",
+                        "amount": 300
+                    }],
+                    "text": "Try answering the wind god.",
+                    "action": [{}],
+                    "afterText": [{
+                        "restriction":[{}],
+                        "text": "You got on your knees, and shouted in a booming voice, in hopes that the wind god Notus will notice. Fortunately the shout reached the ears of the god of southern wind, and he turned back to greet you. You humbly asked him to stop the cold weather, which he kindly accepted."
+                    }],
+                    "afterOptionText": "Could be worse."
+                }
+            ]
+        },
+        {
+            "eventID": "AHugeRain",
+            "conditions": "None",
+            "eventType": "Negative",
+            "eventKarma": "Bad",
+            "basicOptionNumber":1,
+            "dialogues": [
+                {
+                    "restriction":[{}],
+                    "text": "You’re walking on a cornfield. Completely happy by the warm sun glaze covering up the whole ground, you have a good feeling about the trip set in front of you. Suddenly, the sky gets covered with dark rain clouds, making the sunny weather few minutes ago feel like a huge lie. A cold drizzle starts, leading to a freezing downpour, accompanied with powerful gusts wind." },
+                {
+                    "restriction":[{
+                        "stats":"medStat",
+                        "amount":300
+                    }],
+                    "text":"The sudden change of the weather seems so odd, as if the sky were mad."
+                }
+            ],
+            "allOptions": [
+                {
+                    "restriction":[{}],
+                    "text": "Power through",
+                    "action": [{
+                        "type": "moneyGet",
+                        "amount": -25
+                    },
+                    {
+                        "type": "healthChange",
+                        "amount": -2
+                    }],
+                    "afterText": [{
+                        "restriction":[{}],
+                        "text": "You decided to march through the horrible weather. But it turned out that the coldness was too much for any man, and you got a terrible frostbite on your feet, costing you some gold and health to heal."
+                    }],
+                    "afterOptionText": "Damn."
+                },
+                {
+                    "restriction":[{
+                        "stats":"intStat",
+                        "amount": 250
+                    }],
+                    "text": "Stay at a nearby house.",
+                    "action": [{
+                        "type": "moneyGet",
+                        "amount": -20
+                    }],
+                    "afterText": [{
+                        "restriction":[{}],
+                        "text": "You decided to seek help at a nearby house. Fortunately, there was a tavern close enough to reach before too late. You had a good nights sleep there had headed down the road next day."
+                    }],
+                    "afterOptionText": "Could be worse."
+                },
+                {
+                    "restriction": [{
+                        "stats": "speStat",
+                        "amount": 300
+                    }],
+                    "text": "Try answering the wind god.",
+                    "action": [{}],
+                    "afterText": [{
+                        "restriction":[{}],
+                        "text": "You got on your knees, and shouted in a booming voice, in hopes that the wind god Notus will notice. Fortunately the shout reached the ears of the god of southern wind, and he turned back to greet you. You humbly asked him to stop the cold weather, which he kindly accepted."
+                    }],
+                    "afterOptionText": "Could be worse."
+                }
+            ]
+        },
+        {
+            "eventID": "ACorpseParty",
+            "conditions": "None",
+            "eventType": "Negative",
+            "eventKarma": "Good",
+            "basicOptionNumber": 2,
+            "dialogues": [
+                {
+                    "restriction": [
+                        {}
+                    ],
+                    "text": "After a long battle, you move your tired body towards the road ahead. After some time, you come across a quite huge village, with the people welcoming you. They invite you to an annual festival, treating you with a lot of meat and wine."
+                },
+                {
+                    "restriction": [
+                        {
+                            "stats": "intStat",
+                            "amount": 300
+                        }
+                    ],
+                    "text": "The villagers seem very kind, maybe a tad bit too much."
+                }
+            ],
+            "allOptions": [
+                {
+                    "restriction": [
+                        {}
+                    ],
+                    "text": "Follow the invitation",
+                    "action": [
+                        {
+                            "type": "healthChange",
+                            "amount": 10
+                        },
+                        {
+                            "type": "statChange",
+                            "stats": "medStat",
+                            "amount": -20
+                        }
+                    ],
+                    "afterText": [
+                        {
+                            "restriction": [
+                                {}
+                            ],
+                            "text": "You follow their suggestion, stuffing yourself with huge amounts of food and drinks. Hey, its not everyday you get free nutrients!"
+                        }
+                    ],
+                    "afterOptionText": "Yay!"
+                },
+                {
+                    "restriction": [
+                        {}
+                    ],
+                    "text": "Decline the offer",
+                    "action": [
+                        {
+                            "type": "healthChange",
+                            "amount": -5
+                        },
+                        {
+                            "type": "statChange",
+                            "stats": "medStat",
+                            "amount": 20
+                        }
+                    ],
+                    "afterText": [
+                        {
+                            "restriction": [
+                                {}
+                            ],
+                            "text": "The people seem a bit too friendly. You decide its suspicious, and kindly decline the offer. At that moment, the ambience suddenly changes. The people are no longer laughing, and start to try to drag you to the festival. You manage to quickly run away, but get a few scratches and bruises here and there in the run."
+                        }
+                    ],
+                    "afterOptionText": "Probably for the best."
+                },
+                {
+                    "restriction": [
+                        {
+                            "stats": "intStat",
+                            "amount": 500
+                        }
+                    ],
+                    "text": "Play dumb",
+                    "action": [
+                        {
+                            "type": "statChange",
+                            "stats": "medStat",
+                            "amount": 20
+                        },
+                        {
+                            "type": "healthChange",
+                            "amount": 10
+                        }
+                    ],
+                    "afterText": [
+                        {
+                            "restriction": [
+                                {}
+                            ],
+                            "text": "You decide the group has a some fishy smell, and choose follow them and find out what it is. You act as if enjoying the food and goods, and secretly go out the back trying to get to the bottom of this mess. It turns out that they were burning people for the gods favor, and the food was made from the unclean process. Outraged, you play dumb enough to get close to the festival’s leader, and as you were trying to put a knife in his throat, the temples roof came down with a large noise. Zeus blah blah"
+                        }
+                    ],
+                    "afterOptionText": "Nice."
+                }
+            ]
+        },
+        {
+            "eventID": "ACorpseParty",
+            "conditions": "None",
+            "eventType": "Negative",
+            "eventKarma": "Normal",
+            "basicOptionNumber": 2,
+            "dialogues": [
+                {
+                    "restriction": [
+                        {}
+                    ],
+                    "text": "After a long battle, you move your tired body towards the road ahead. After some time, you come across a quite huge village, with the people welcoming you. They invite you to an annual festival, treating you with a lot of meat and wine."
+                },
+                {
+                    "restriction": [
+                        {
+                            "stats": "intStat",
+                            "amount": 300
+                        }
+                    ],
+                    "text": "The villagers seem very kind, maybe a tad bit too much."
+                }
+            ],
+            "allOptions": [
+                {
+                    "restriction": [
+                        {}
+                    ],
+                    "text": "Follow the invitation",
+                    "action": [
+                        {
+                            "type": "healthChange",
+                            "amount": 10
+                        },
+                        {
+                            "type": "statChange",
+                            "stats": "medStat",
+                            "amount": -20
+                        }
+                    ],
+                    "afterText": [
+                        {
+                            "restriction": [
+                                {}
+                            ],
+                            "text": "You follow their suggestion, stuffing yourself with huge amounts of food and drinks. Hey, its not everyday you get free nutrients!"
+                        }
+                    ],
+                    "afterOptionText": "Yay!"
+                },
+                {
+                    "restriction": [
+                        {}
+                    ],
+                    "text": "Decline the offer",
+                    "action": [
+                        {
+                            "type": "healthChange",
+                            "amount": -5
+                        },
+                        {
+                            "type": "statChange",
+                            "stats": "medStat",
+                            "amount": 20
+                        }
+                    ],
+                    "afterText": [
+                        {
+                            "restriction": [
+                                {}
+                            ],
+                            "text": "The people seem a bit too friendly. You decide its suspicious, and kindly decline the offer. At that moment, the ambience suddenly changes. The people are no longer laughing, and start to try to drag you to the festival. You manage to quickly run away, but get a few scratches and bruises here and there in the run."
+                        }
+                    ],
+                    "afterOptionText": "Probably for the best."
+                },
+                {
+                    "restriction": [
+                        {
+                            "stats": "intStat",
+                            "amount": 500
+                        }
+                    ],
+                    "text": "Play dumb",
+                    "action": [
+                        {
+                            "type": "statChange",
+                            "stats": "medStat",
+                            "amount": 20
+                        },
+                        {
+                            "type": "healthChange",
+                            "amount": 10
+                        }
+                    ],
+                    "afterText": [
+                        {
+                            "restriction": [
+                                {}
+                            ],
+                            "text": "You decide the group has a some fishy smell, and choose follow them and find out what it is. You act as if enjoying the food and goods, and secretly go out the back trying to get to the bottom of this mess. It turns out that they were burning people for the gods favor, and the food was made from the unclean process. Outraged, you play dumb enough to get close to the festival’s leader, and as you were trying to put a knife in his throat, the temples roof came down with a large noise. Zeus blah blah"
+                        }
+                    ],
+                    "afterOptionText": "Nice."
+                }
+            ]
+        }
+    ]
+}

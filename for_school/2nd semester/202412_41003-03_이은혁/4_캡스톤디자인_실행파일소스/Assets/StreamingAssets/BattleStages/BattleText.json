@@ -1,0 +1,19 @@
+{
+    "battleText":
+    {
+        "amountText":{
+            "smallest":["Super Tiny","Meager","Microscopic"],
+            "smaller":["Mini","Miniature","Tiny","Narrow","Slight","Petty","Insignificant"],
+            "small":["Modest","Small","Weak","Poor"],
+            "medium":["Decent","Normal","Average"],
+            "large":["Good","Strong"],
+            "larger":["Huge","Great","Horrific"],
+            "largest":["Life Threatning","World Ending"]
+        },
+        "weaponText":{
+            "broadSword":["Slash","Push","Cut","Stab","Pierce","Impale","Cleave","Chop","Hack","Swing","Strike","Thrust","Lunge","Sweep","Smash","Bash","Crush","Bludgeon","Spank","Paddle"],
+            "dagger":["Stab","Pierce","Impale","Cut","Slash","Thrust","Lunge","Jab","Poke"],
+            "fist":["Punch","Slap","Kick","Elbow","Headbutt","Knee","Bite","Scratch"]
+        }
+    }
+}

@@ -1,0 +1,2 @@
+유니티 프로그램 설치 -> 새로운 유니티 프로젝트 제작 ->해당 Assets, Packages, ProjectSettings 파일 삽입
+유니티 버젼: 2022.3.20f1 사용 

@@ -1,0 +1,114 @@
+{
+    "events": [
+        {
+            "stage": 0,
+            "stageDescription": "Main Strength",
+            "eventType": "Three Options",
+            "optionNumber":3,
+            "dialogues": [
+                "Tell me..",
+                "What is your biggest strength?",
+                "I need to know."
+            ],
+            "allOptions": [
+                {
+                    "optionText": "Physical",
+                    "action": "Main Phy"
+                },
+                {
+                    "optionText": "Intelligence",
+                    "action": "Main Int"
+                },
+                {
+                    "optionText": "Stamina",
+                    "action": "Main Sta"
+                },
+                {
+                    "optionText": "Meditation",
+                    "action": "Main Med"
+                },
+                {
+                    "optionText": "Speech",
+                    "action": "Main Spe"
+                },
+                {
+                    "optionText": "Weapon Skill",
+                    "action": "Main Wea"
+                }
+            ]
+        },
+        {
+            "stage": 1,
+            "stageDescription": "Sub Strength",
+            "eventType": "Two Options",
+            "optionNumber": 2,
+            "dialogues": [
+                "...and your second best?"
+            ],
+            "allOptions": [
+                {
+                    "optionText": "Physical",
+                    "action": "Sub Phy"
+                },
+                {
+                    "optionText": "Intelligence",
+                    "action": "Sub Int"
+                },
+                {
+                    "optionText": "Stamina",
+                    "action": "Sub Sta"
+                },
+                {
+                    "optionText": "Meditation",
+                    "action": "Sub Med"
+                },
+                {
+                    "optionText": "Speech",
+                    "action": "Sub Spe"
+                },
+                {
+                    "optionText": "Weapon Skill",
+                    "action": "Sub Wea"
+                }
+            ]
+        },
+        {
+            "stage": 2,
+            "stageDescription": "Main Weapon",
+            "eventType": "Three Options",
+            "optionNumber": 3,
+            "dialogues": [
+                "What will be your weapon of choice?"
+            ],
+            "allOptions": [
+                {
+                    "optionText": "Bare Fist",
+                    "action": "Weapon Fist"
+                },
+                {
+                    "optionText": "Rusty Broadsword",
+                    "action": "Weapon Broadsword"
+                },
+                {
+                    "optionText": "Rusty Dagger",
+                    "action": "Weapon Dagger"
+                }
+            ]
+        },
+        {
+            "stage": 3,
+            "stageDescription": "Final",
+            "eventType": "One Option",
+            "optionNumber": 1,
+            "dialogues": [
+                "Now Go and have fun!"
+            ],
+            "allOptions": [
+                {
+                    "optionText": "Okay",
+                    "action": "Scene Change"
+                }
+            ]
+        }
+    ]
+}
